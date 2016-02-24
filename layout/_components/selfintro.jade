@@ -6,14 +6,14 @@ section.selfintro
             if theme.selfIntro.title
                 h3.title
                     != theme.selfIntro.title
-            else 
+            else
                 h3.title Lorem ipsum dolor sit
             if theme.selfIntro.content
-                p.content 
+                p.content
                     != theme.selfIntro.content
-            else 
+            else
                 p.content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur iure hic, ea deleniti, distinctio laudantium.
-            
+
             ul.contact
                 each value, key in theme.selfIntro.social
                     li

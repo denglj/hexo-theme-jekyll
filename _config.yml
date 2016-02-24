@@ -2,16 +2,20 @@ menu:
     home: /
     blog: /archives/
     rss: /atom.xml
-    github: https://github.com/xxxxx
+    github: https://github.com/pyweek/pyweek.github.io
+    news: /news/
+    bang: /bang/
+    challenges: /challenges/
+    help: /help/
 
 favicon: /favicon.png
 
-google_analytics: UA-65933410-1
-baidu_analytics: //hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2
+google_analytics:
+baidu_analytics:
 
 selfIntro:
-    title: PING4GOD
-    content: 三年不翅，将以长羽翼；不飞不鸣，将以观民则。
+    title: 每周实战一题，每周前进一步
+    content: 贵以恒,何必三更眠五更起；最无益,只怕一日曝十日寒。
     social:
-        github: https://github.com/xxxxx
-        weibo: http://weibo.com/xxxxxx
+        github: https://github.com/pyweek/pyweek.github.io
+

@@ -1,28 +1,17 @@
 section.installtheme
     .row-flex.row-flex-row.limit-width
         .intro
-            h3 
-                | 如果你喜欢 
-                a(href="https://github.com/pinggod/hexo-theme-jekyll") Hexo-theme-hexo 
-                | , 何不动手尝试一下!
+            h3
+                | 汝欲学有所成
+                | , 何不动手一试!
         .code
-            .title Quick-start Instructions
-            .shell 
+            .title [未命名]-VIM
+            .shell
                 .line
-                    span.output # Prerequisite: Git, Node, Hexo
+                    span.output # Quick Sort in 3 lines
                 .line
-                    span.path ~
-                    span.prompt $
-                    span.command hexo init blog && cd blog
+                    span.command def qsort(L):
                 .line
-                    span.path ~/blog
-                    span.prompt $
-                    span.command npm install
+                    span.command &nbsp;&nbsp;if len(L) <= 1: return L
                 .line
-                    span.path ~/blog
-                    span.prompt $
-                    span.command git clone [hexo-theme-jekyll]
-                .line
-                    span.path ~/blog
-                    span.prompt $
-                    span.command vim _config.yml
+                    span.command &nbsp;&nbsp;return qsort([lt for lt in L[1:] if lt < L[0]]) + L[0:1] + qsort([ge for ge in L[1:] if ge >= L[0]])

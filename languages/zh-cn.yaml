@@ -4,11 +4,23 @@ index:
 archive:
     title: 博客
 
+challenges:
+    title: 历史挑战
+
+bang:
+    title: 黑肉榜
+
 rss:
     title: rss
 
 github:
     title: github
+
+news:
+    title: 新闻
+
+help:
+    title: 帮助
 
 excerpt_link:
     title: 阅读全文

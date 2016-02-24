@@ -18,24 +18,27 @@ mixin postInfo(item)
 
 mixin homePost()
     .home
-        - page.posts.each(function(item, index) {
-            if is_home() && index === 0
-                article.post-block
-                    h2.post-title
-                        a.post-title-link(href= url_for(item.path))
-                            != item.title
-                        .post-badge-wrap
-                            .post-badge
-                                span.post-badge-msg!= "Issue №"
-                                span.post-num!= site.posts.length
-                    .post-meta
-                        +date(item.date)
-                    .post-content
-                        != item.excerpt
-                    .read-more
-                        a(href=config.root + item.path) 
-                            != __('excerpt_link.title')
-        - })
+        if is_home()
+            - var chgs = site.categories.findOne({name: 'challenges'}).posts.sort('date', -1).toArray()
+            - var chg = chgs[0]
+            article.post-block
+                h2.post-title
+                    a.post-title-link(href= url_for(chg.path))
+                        != chg.title
+                    .post-badge-wrap
+                        .post-badge
+                            span.post-badge-msg!= "挑战 №"
+                            span.post-num!= chgs.length
+                .post-meta
+                    +date(chg.date)
+                .post-content
+                    != chg.excerpt
+                .read-more
+                    a(href=config.root + chg.path)
+                        != __('excerpt_link.title')
+                br
+                .read-more
+                    != config.description
 
 mixin archivePost()
     .archive

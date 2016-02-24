@@ -4,11 +4,17 @@ nav
             a.nav-link(href= theme.menu['home'] class=is_home() ? 'active' : '')
                 = __('index.title')
         li.nav-list-item
-            a.nav-link(href= theme.menu['blog'] class= is_archive() || is_post() ? 'active' : '')    
-                = __('archive.title')
+            a.nav-link(href= theme.menu['challenges'] class=is_current('challenges') ? 'active' : '')
+                = __('challenges.title')
         li.nav-list-item
-            a.nav-link(href= theme.menu['rss'])
+            a.nav-link(href= theme.menu['bang'] class=is_current('bang') ? 'active' : '')
+                = __('bang.title')
+        li.nav-list-item
+            a.nav-link(href= theme.menu['news'] class=is_current('news') ? 'active' : '')
+                = __('news.title')
+        li.nav-list-item
+            a.nav-link(href= theme.menu['help'] class=is_current('help') ? 'active' : '')
+                = __('help.title')
+        li.nav-list-item
+            a.nav-link(href= theme.menu['rss'] target="_blank")
                 = __('rss.title')
-        li.nav-list-item
-            a.nav-link(href= theme.menu['github'] target="_blank")    
-                = __('github.title')
